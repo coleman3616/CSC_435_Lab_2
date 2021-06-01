@@ -1,0 +1,27 @@
+install.packages('tidyverse')
+vars <- c(var1 ="Brand", var2 = "Name")
+numCB <- Lab2_Candy_Bars %>% select(-vars)
+view(numCB)
+meanCB <- map(numCB, mean, na.rm ="TRUE")
+minCB <- map(numCB, min,  na.rm ="TRUE" )
+maxCB <- map(numCB, max,  na.rm ="TRUE" )
+sdCB <- map(numCB, sd,  na.rm ="TRUE" )
+length(na.omit(Lab2_Candy_Bars$`Iron %RDI`))
+ggplot(data = "mpg")
+df <- Lab2_Candy_Bars
+view(df)
+dfu <- unique(df)
+df <- df %>% distinct()
+Lab2_Candy_Bars$Brand <- str_to_title(Lab2_Candy_Bars$Brand)
+dx <- Lab2_Candy_Bars[duplicated(Lab2_Candy_Bars),]
+Lab2_Candy_Bars[duplicated(Lab2_Candy_Bars),]
+ggplot(data = df)
+dfq <- Lab2_Candy_Bars[duplicated(Lab2_Candy_Bars),]
+view(dfq)
+ggplot(data = dfq, aes(x = Name)) + geom_histogram(stat = "count")
+ggplot(data = df, aes(x="", y=df$Calories)) + geom_boxplot()
+ggplot(data = df, aes(x="", y=df$`Carbohydrate g`)) + geom_boxplot()
+sum(is.na(df$))
+naCB <- map(df, ~sum(is.na(.)))
+nCB <- map(df, ~sum(!is.na(.)))
+ggplot()
